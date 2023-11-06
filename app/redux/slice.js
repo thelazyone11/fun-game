@@ -3,7 +3,7 @@ const { createSlice } = require("@reduxjs/toolkit");
 const initialState = {
   breakTime: null,
   playTime: null,
-  postionNumber: null,
+  postionNumber: [],
 };
 
 const Slice = createSlice({
@@ -18,7 +18,7 @@ const Slice = createSlice({
     },
 
     updatePostionNumber: (state, action) => {
-      state.postionNumber = action.payload;
+      state.postionNumber.push(action.payload);
     },
   },
 });

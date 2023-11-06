@@ -44,8 +44,12 @@ export default function Home() {
       {isGameOn ? (
         <GameScreen></GameScreen>
       ) : (
-        <div className="flex min-h-screen flex-col items-center justify-between p-24">
-          <h1 className="text-9xl">Fun-Game</h1>
+        <div className="flex min-h-screen flex-col items-center justify-between ">
+          <div>
+            <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9lx text-center mt-10">
+              100 Position Challenge
+            </h1>
+          </div>
 
           <form
             onSubmit={handleInput}
