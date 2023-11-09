@@ -10,8 +10,8 @@ function RandomNumberSelector() {
   const [isLoading, setIsLoading] = useState(false);
   const dispatch = useDispatch();
   const donePostion = useSelector((state) => state.postionNumber);
-  const statebreakTime = useSelector((state) => state.breakTime);
-  const stateplayTime = useSelector((state) => state.playTime);
+  // const statebreakTime = useSelector((state) => state.breakTime);
+  // const stateplayTime = useSelector((state) => state.playTime);
 
   const genrateNumber = async () => {
     setIsLoading(true);
@@ -39,12 +39,12 @@ function RandomNumberSelector() {
     <div>
       <div className="flex justify-between">
         <div>
-          <div className="text-left ml-4 mt-4">
+          {/* <div className="text-left ml-4 mt-4">
             Play Time : {stateplayTime}min
           </div>
           <div className="text-left ml-4 mt-2">
             Break Time : {statebreakTime}min
-          </div>
+          </div> */}
         </div>
 
         <div className="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 bg-blue-500 rounded-full flex items-center justify-center m-4">

@@ -13,30 +13,30 @@ export default function Home() {
   const [breakTime, setBreakTime] = useState("");
   const [errorText, setErrorText] = useState("");
   const [isGameOn, setIsGameOn] = useState(false);
-  const dispatch = useDispatch();
-  const statebreakTime = useSelector((state) => state.breakTime);
-  const stateplayTime = useSelector((state) => state.playTime);
+  // const dispatch = useDispatch();
+  // const statebreakTime = useSelector((state) => state.breakTime);
+  // const stateplayTime = useSelector((state) => state.playTime);
 
   const handleInput = (e) => {
     e.preventDefault();
 
-    if (playTime === "" && breakTime === "") {
-      return setErrorText("Error : Please Enter play time and break time");
-    }
+    // if (playTime === "" && breakTime === "") {
+    //   return setErrorText("Error : Please Enter play time and break time");
+    // }
 
-    dispatch(updatePlayTime(playTime));
-    dispatch(updateBreakTime(breakTime));
+    // dispatch(updatePlayTime(playTime));
+    // dispatch(updateBreakTime(breakTime));
     setIsGameOn(true);
 
     return setErrorText("");
   };
 
   useEffect(() => {
-    if (statebreakTime === null && stateplayTime === null) {
-      console.log("data is null");
-    } else {
-      console.log("data is NotNull");
-    }
+    // if (statebreakTime === null && stateplayTime === null) {
+    //   console.log("data is null");
+    // } else {
+    //   console.log("data is NotNull");
+    // }
   }, []);
 
   return (
@@ -51,7 +51,7 @@ export default function Home() {
             </h1>
           </div>
 
-          <form
+          {/* <form
             onSubmit={handleInput}
             className="w-full max-w-md  p-8 rounded-lg shadow-md"
           >
@@ -79,14 +79,18 @@ export default function Home() {
             <label className="text-base text-red-800">{errorText}</label>
 
             <div className="mb-4">
-              <button
-                type="submit"
-                className="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 my-5"
-              >
-                Submit
-              </button>
+            
             </div>
-          </form>
+          </form> */}
+          <div className="w-full max-w-md  p-8 rounded-lg shadow-md">
+            <button
+              onClick={handleInput}
+              type="submit"
+              className="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 my-5"
+            >
+              Start
+            </button>
+          </div>
 
           <h4 className="text-2xl">How to play?</h4>
         </div>
